@@ -1,0 +1,30 @@
+{
+  "name": "signature-input",
+  "version": "1.0.0",
+  "description": "A re-usable interactive form control for adding signature/drawing to forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibhavar/signature-input.git"
+  },
+  "keywords": [
+    "signature",
+    "form",
+    "draw",
+    "canvas"
+  ],
+  "author": "vaibhavar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaibhavar/signature-input/issues"
+  },
+  "homepage": "https://github.com/vaibhavar/signature-input#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-minify": "^2.1.0"
+  }
+}

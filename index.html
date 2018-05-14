@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signature-Input | Add signature to your forms</title>
+</head>
+<link rel="stylesheet" href="dist/js/signature-input.css"/>
+<body>
+    <h2>Form with Signature</h2>
+    <form>
+        <input placeholder="Name" />
+        <input placeholder="Age" />
+        <label>Signature</label>
+        <div id="signature" />
+    </form>
+    <script src="dist/js/signature-input.js"></script>
+    <script type="text/Javascript">
+     // Instantiate the input 
+     signatureInputApi.init({ selector: "#signature", width: 500, height: 100, inputName: "signature", color: "#3399FF" });
+    </script>
+</body>
+
+</html>
