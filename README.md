@@ -6,16 +6,16 @@ A re-usable control for adding interactive signature input to your forms
 
 # Usage
 > Classic HTML Way
- <!-- Import the script tag -->
+ - Import the script tag
  `<script type="text/Javascript" src="dist/js/signature-input.js"></script>`
  
- <!-- Import the style -->
+ - Import the style
  `<link rel="stylesheet" href="dist/css/signature-input.css"/>`
  
- <!-- Create a div to hold the signature input -->
+ - Create a div to hold the signature input
  `<div id="signature"></div>`
  
- 
+ - Instantiate the signature input on your HTML page
  `<script type="text/Javascript">
   signatureInputApi.init({
     selector: "#signature"
