@@ -7,20 +7,20 @@ A re-usable control for adding interactive signature input to your forms
 # Usage
 > Classic HTML Way
  <!-- Import the script tag -->
- <script type="text/Javascript" src="dist/js/signature-input.js"></script>
+ `<script type="text/Javascript" src="dist/js/signature-input.js"></script>`
  
  <!-- Import the style -->
- <link rel="stylesheet" href="dist/css/signature-input.css"/>
+ `<link rel="stylesheet" href="dist/css/signature-input.css"/>`
  
  <!-- Create a div to hold the signature input -->
- <div id="signature"></div>
+ `<div id="signature"></div>`
  
  
- <script type="text/Javascript">
+ `<script type="text/Javascript">
   signatureInputApi.init({
     selector: "#signature"
   });
- </script>
+ </script>`
 
 # Configuration
 Config object supports :
