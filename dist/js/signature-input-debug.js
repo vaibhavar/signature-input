@@ -15,12 +15,12 @@ let SignatureInput = function(oConfig) {
   }
 };
 
-SignatureInput.prototype.drawOnCanvas = function(ev) {
+SignatureInput.prototype.drawOnCanvas = function(x,y) {
   let prevX, prevY;
   prevX = this.currX;
   prevY = this.currY;
-  this.currX = ev.layerX;
-  this.currY = ev.layerY;
+  this.currX = x;
+  this.currY = y;
 
   this.oCtx.beginPath();
   this.oCtx.moveTo(prevX, prevY);
@@ -37,11 +37,17 @@ SignatureInput.prototype.copyToInput = function() {
 };
 
 SignatureInput.prototype.attachEvents = function() {
+  let oBoundRect = this.oSelector.getBoundingClientRect();
+  let offsetX = oBoundRect.left;
+  let offsetY = oBoundRect.top;
+
   this.oCanvas.addEventListener(
     "mousemove",
     function(ev) {
       if (this.active) {
-        this.drawOnCanvas(ev);
+        let x = ev.clientX - offsetX;
+        let y = ev.clientY - offsetY;
+        this.drawOnCanvas(x,y);
       }
     }.bind(this),
     false
@@ -51,7 +57,9 @@ SignatureInput.prototype.attachEvents = function() {
     "touchmove",
     function(ev) {
       if (this.active) {
-        this.drawOnCanvas(ev);
+        let x = ev.targetTouches[0].clientX - offsetX;
+        let y = ev.targetTouches[0].clientY - offsetY;
+        this.drawOnCanvas(x,y);
       }
     }.bind(this),
     false
